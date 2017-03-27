@@ -8,7 +8,7 @@ function onDeviceReady() {
 
 function deviceInfo() {
 
-	info =  'Hi, I am your smartphone :-)' + '\n' +
+	info =  'Informacje o telefonie' + '\n' +
 			'=====' + '\n' +
 			'Device Name    : '     + device.name     + '\n' + 
 			'Device Cordova : '  + device.cordova + '\n' + 
@@ -24,7 +24,7 @@ function deviceInfo() {
 function personalData()
 {
 	info =  'Moje imie to Dominik' + '\n' +
-			'a nazwisko: Adamski \n' 
+			'a nazwisko: Adamski \n';
 
 	navigator.notification.alert(info);
 }
@@ -36,5 +36,13 @@ function businesscard()
 	'Email: dominik.adamski@interia.pl \n' +
 	'Dean\'s group: KrDUIs1011 \n' +
 	'Field of study: applied computer science';
+	navigator.notification.alert(info);
+}
+
+function network()
+{
+	info = 'Informacje dotyczace połączenia z internetem \n' +
+	'Czy jest polaczenie z wi-fi: ' + Connection.WIFI + '\n' +
+	'Czy jest jakiekolwiek polaczenie z internetem:' + Connection.NONE + '\n';
 	navigator.notification.alert(info);
 }
