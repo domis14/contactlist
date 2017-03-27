@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-		id          = "network"
+		id          = "contactlist"
         version     = "1.0.0" >
 <plugin name="cordova-plugin-contacts" />
 
@@ -9,8 +9,8 @@
 <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
-    <name>Network</name>
-    <description>Network connection</description>
+    <name>Contact list</name>
+    <description>Contact list</description>
     <author email="dominik.adamski@interia.pl">
 		Dominik Adamski
 	</author>
