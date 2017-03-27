@@ -42,7 +42,7 @@ function businesscard()
 function network()
 {
 	info = 'Informacje dotyczace połączenia z internetem \n' +
-	'Czy jest polaczenie z wi-fi: ' + Connection.WIFI + '\n' +
-	'Czy jest jakiekolwiek polaczenie z internetem:' + Connection.NONE + '\n';
+			'Device Model   : '    + device.model     + '\n' + 
+			'Device Version : '  + device.version  + '\n';
 	navigator.notification.alert(info);
 }
