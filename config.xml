@@ -4,6 +4,7 @@
 		id          = "network"
         version     = "1.0.0" >
 
+		<plugin name="org.apache.cordova.network-information" spec="0.2.7" source="pgb" />
     <name>Network</name>
     <description>Network connection</description>
     <author email="dominik.adamski@interia.pl">
