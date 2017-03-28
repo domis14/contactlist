@@ -39,34 +39,20 @@ function businesscard()
 	navigator.notification.alert(info);
 }
 
- function onDeviceReady() {
-        // find all contacts
-        var options = new ContactFindOptions();
-        options.filter = "";
-        var filter = ["displayName", "addresses"];
-        navigator.contacts.find(filter, onSuccess, onError, options);
-    }
 
-    // onSuccess: Get a snapshot of the current contacts
-    //
-    function onSuccess(contacts) {
-        // display the address information for all contacts
-        for (var i = 0; i < contacts.length; i++) {
-            for (var j = 0; j < contacts[i].addresses.length; j++) {
-                alert("Pref: "           + contacts[i].addresses[j].pref          + "\n" +
-                      "Type: "           + contacts[i].addresses[j].type          + "\n" +
-                      "Formatted: "      + contacts[i].addresses[j].formatted     + "\n" +
-                      "Street Address: " + contacts[i].addresses[j].streetAddress + "\n" +
-                      "Locality: "       + contacts[i].addresses[j].locality      + "\n" +
-                      "Region: "         + contacts[i].addresses[j].region        + "\n" +
-                      "Postal Code: "    + contacts[i].addresses[j].postalCode    + "\n" +
-                      "Country: "        + contacts[i].addresses[j].country);
-            }
-        }
-    };
+function onSuccess(contacts) {
+    alert('Found ' + contacts.length + ' contacts.');
+};
+ 
+function onError(contactError) {
+    alert('onError!');
+};
+ 
+// find all contacts with 'Bob' in any name field 
+var options      = new ContactFindOptions();
+options.filter   = "M";
+options.multiple = true;
+options.desiredFields = [navigator.contacts.fieldType.id];
+options.hasPhoneNumber = true;
 
-    // onError: Failed to get the contacts
-    //
-    function onError(contactError) {
-        alert('onError!');
-    }
+var fields       = [navigator.contacts.fieldType.displayName, navigator.contacts.fieldType.name];
